@@ -1,14 +1,17 @@
+# Usa la imagen base oficial de Node.js
 FROM node:latest
 
+# Establece el directorio de trabajo dentro del contenedor
 WORKDIR /usr/src/app
 
-COPY site_content/package.json site_content/package-lock.json ./
+# Copia el contenido de la aplicación al directorio de trabajo
+COPY ./site_content /usr/src/app
 
+# Instala las dependencias de la aplicación
 RUN npm install
 
-COPY site_content/ .
-
+# Expone el puerto 3000 en el contenedor
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
-
+# Comando para iniciar la aplicación Node.js
+CMD ["npm", "start"]
