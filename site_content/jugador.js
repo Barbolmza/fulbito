@@ -1,5 +1,6 @@
 const express = require('express');
 const db = require('./mariaDB.js'); // Importa el modelo de la base de datos
+//const db = require('./postgreSQL.js'); // Importa el modelo de la base de datos
 const router = express.Router();
 
 // Define una ruta que espera un parámetro en la URL llamado "jugadorID"
