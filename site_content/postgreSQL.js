@@ -1,3 +1,5 @@
+
+const sequelize = new Sequelize(process.env.DATABASE_URL);
 const { Pool } = require('pg');
 
 // Configuración de la conexión a la base de datos PostgreSQL
